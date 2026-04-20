@@ -218,11 +218,17 @@ body {
     border-radius: 20px;
   }
 }
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 </style>
 </head>
-<body>
 
-<body>
+<body id="top">
 
 <!-- MARQUEE FIXED ATAS -->
 <div id="marquee" style="
@@ -242,19 +248,25 @@ body {
   </marquee>
 </div>
 
-<!-- HEADER NAVIGATION -->
+<!-- HEADER NAVIGATION (FIX ATAS) -->
 <div class="header-nav">
-  <a href="#" class="nav-btn">🏠 Home</a>
+
   <a href="https://t.me/+W6T8PwY-MklmMGY1" target="_blank" class="nav-btn telegram-btn">
     📢 Join Telegram
   </a>
+
   <a href="#reseller" class="nav-btn" style="background:#facc15; color:black;">
     🚀 Reseller
   </a>
+
   <a href="#" onclick="openRules()" class="nav-btn" style="background:#ef4444; color:white;">
-  ❗ Rules ID
-</a>
+    ❗ Rules ID
+  </a>
+
 </div>
+
+<!-- ✅ HOME FLOATING BUTTON (LETak SINI) -->
+<a href="#top" class="home-float">🏠</a>
   
 <div class="container">
 
