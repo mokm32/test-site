@@ -236,6 +236,9 @@ body {
   <a href="#reseller" class="nav-btn" style="background:#facc15; color:black;">
     🚀 Reseller
   </a>
+  <a href="#" onclick="openRules()" class="nav-btn" style="background:#ef4444; color:white;">
+  ❗ Rules ID
+</a>
 </div>
   
 <div class="container">
@@ -653,6 +656,14 @@ function openImagePreview(src){
   document.getElementById("modalImage").src = src;
   document.getElementById("panelModal").style.display = "flex";
 }
+
+function openRules(){
+  document.getElementById("rulesModal").style.display = "flex";
+}
+
+function closeRules(){
+  document.getElementById("rulesModal").style.display = "none";
+}
 </script>
 
 <!-- ===== PANEL PREVIEW MODAL ===== -->
@@ -687,6 +698,81 @@ function openImagePreview(src){
     <!-- IMAGE -->
     <img id="modalImage" src="" 
      style="width:100%; border-radius:15px;">
+
+  </div>
+</div>
+
+<!-- ===== RULES MODAL (LETak LUAR) ===== -->
+<div id="rulesModal" style="
+  display:none;
+  position:fixed;
+  z-index:10001;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+">
+
+  <div style="
+    background:#020617;
+    padding:25px;
+    border-radius:15px;
+    max-width:500px;
+    width:90%;
+    color:white;
+    overflow-y:auto;
+    max-height:90%;
+    position:relative;
+  ">
+
+    <!-- CLOSE BUTTON -->
+    <span onclick="closeRules()" style="
+      position:absolute;
+      top:10px;
+      right:15px;
+      font-size:20px;
+      cursor:pointer;
+      color:#f87171;
+    ">✖</span>
+
+    <h2 style="text-align:center; margin-bottom:15px;">❗ INFO PENTING</h2>
+
+    <p>Sila pastikan anda menggunakan aplikasi OTT versi terkini sebelum memasukkan ID bagi mengelakkan masalah login selepas kemas kini.</p>
+
+    <br>
+
+    <b>⚠️ Perhatian:</b>
+    <ul>
+      <li>Clear data aplikasi OTT</li>
+      <li>Padam (uninstall) aplikasi OTT</li>
+      <li>Update aplikasi OTT selepas login</li>
+    </ul>
+
+    <p><b>❗ Elakkan semua tindakan di atas selepas anda berjaya LOGIN ID.</b></p>
+
+    <br>
+
+    <b>🗯 Makluman Tambahan:</b>
+    <p>Jangan tukar bahasa (language) aplikasi OTT selepas login ID.</p>
+
+    <b>⛔️ Akibatnya:</b>
+    <p>ID akan mengalami error dan tidak boleh digunakan semula.</p>
+
+    <br>
+
+    <b>📌 Penting:</b>
+    <p>
+      Pastikan anda hanya menggunakan <b>SATU aplikasi OTT sahaja dalam satu device</b>.<br><br>
+      Jika anda menggunakan dua aplikasi OTT dengan ID yang sama, sistem akan mengesan seolah-olah ID digunakan pada dua peranti berbeza.
+    </p>
+
+    <p><b>➡️ Ini akan menyebabkan slot ID dikira sebagai 2 device telah login.</b></p>
+
+    <p style="margin-top:10px;">Harap maklum. Terima kasih.</p>
+
   </div>
 </div>
 
