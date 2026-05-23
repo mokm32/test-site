@@ -1,302 +1,182 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="ms" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Necklenj Store - Premium OTT & Streaming Apps</title>
-    <!-- Tailwind CSS via CDN -->
+    <title>Necklenj Store - Pakej OTT Termurah Malaysia</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts & FontAwesome for Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased">
 
-    <!-- 1. FLOATING PROMO BAR -->
-    <div class="bg-indigo-600 text-white text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide">
-        ⚡ PROMO TERBATAS: Garansi Full Sesuai Durasi & Proses Kilat 5 Menit!
-    </div>
-
-    <!-- 2. HEADER & NAVBAR -->
-    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header class="sticky top-0 z-50 glass border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center font-black text-xl text-white shadow-lg shadow-indigo-600/30">N</div>
-                <span class="text-xl font-extrabold tracking-tight text-white">NECKLENJ<span class="text-indigo-500">STORE</span></span>
+                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center font-black text-white">N</div>
+                <span class="text-xl font-extrabold text-white uppercase tracking-tighter">NECKLENJ<span class="text-indigo-500">STORE</span></span>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
-                <a href="#katalog" class="hover:text-indigo-400 transition">Katalog OTT</a>
-                <a href="#keunggulan" class="hover:text-indigo-400 transition">Kenapa Kami</a>
-                <a href="#testimoni" class="hover:text-indigo-400 transition">Testimoni</a>
-                <a href="#faq" class="hover:text-indigo-400 transition">FAQ</a>
-            </nav>
-            <div>
-                <a href="#katalog" class="bg-indigo-600 text-white px-5 py-2.5 text-sm font-semibold hover:bg-indigo-500 transition duration-300 rounded-xl shadow-lg shadow-indigo-600/20">
-                    Order Sekarang
-                </a>
-            </div>
+            <a href="#katalog" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-lg font-bold text-sm transition">Beli Sekarang</a>
         </div>
     </header>
 
-    <!-- 3. HERO SECTION (Tech & Modern Style) -->
-    <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-28 flex items-center">
-        <!-- Background Glows -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/10 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-purple-600/10 blur-[100px] rounded-full pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="space-y-6 text-center lg:text-left">
-                <span class="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-indigo-400 bg-indigo-500/10 px-3 py-1.5 rounded-full border border-indigo-500/20">
-                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> Agen OTT Terpercaya Sejak 2024
-                </span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
-                    Nonton Premium <br class="hidden sm:inline">
-                    <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Hemat Hingga 80%</span>
-                </h1>
-                <p class="text-base sm:text-lg text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                    Bosan bayar langganan mahal? Dapatkan ID Netflix, Spotify, YouTube Premium resmi, legal, dan bergaransi penuh di Necklenj Store. Proses otomatis dan anti-hold!
-                </p>
-                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#katalog" class="bg-indigo-600 text-white px-8 py-4 font-bold shadow-lg shadow-indigo-600/20 hover:bg-indigo-500 transition duration-300 text-center rounded-xl">
-                        Lihat Daftar Harga <i class="fas fa-play ml-2 text-xs"></i>
-                    </a>
-                    <a href="#faq" class="bg-slate-900 border border-slate-800 text-slate-300 px-8 py-4 font-semibold hover:bg-slate-800 transition text-center rounded-xl">
-                        Tanya Sistem Garansi
-                    </a>
-                </div>
-                <!-- Trust Badge -->
-                <div class="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs sm:text-sm text-slate-500 border-t border-slate-900 mt-8">
-                    <div><i class="fas fa-bolt text-indigo-500 mr-1.5"></i> Proses 5-15 Menit</div>
-                    <div><i class="fas fa-shield-alt text-indigo-500 mr-1.5"></i> 100% Garansi Full</div>
-                    <div><i class="fas fa-user-check text-indigo-500 mr-1.5"></i> 5,000+ Akun Aktif</div>
-                </div>
-            </div>
-
-            <!-- Hero Image Mockup (Aplikasi Streaming) -->
-            <div class="relative flex justify-center lg:justify-end">
-                <div class="relative w-full max-w-md p-6 bg-slate-900/50 border border-slate-800 rounded-3xl backdrop-blur-sm shadow-2xl">
-                    <div class="absolute -top-4 -right-4 bg-indigo-600 text-white font-bold text-xs px-3 py-1.5 rounded-lg rotate-12 shadow">FLASH SALE</div>
-                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4"><i class="fas fa-fire text-amber-500 mr-2"></i> Paling Banyak Dibeli</h3>
-                    <!-- Mini List -->
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between p-3 bg-slate-950/60 rounded-xl border border-slate-800">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center text-xs font-black">N</div>
-                                <span class="font-semibold text-sm">Netflix UHD 4K (1 Bulan)</span>
-                            </div>
-                            <span class="text-xs text-slate-400 font-bold bg-slate-800 px-2 py-1 rounded">Rp 35.000</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 bg-slate-950/60 rounded-xl border border-slate-800">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-xs"><i class="fab fa-spotify text-white"></i></div>
-                                <span class="font-semibold text-sm">Spotify Premium (3 Bulan)</span>
-                            </div>
-                            <span class="text-xs text-slate-400 font-bold bg-slate-800 px-2 py-1 rounded">Rp 25.000</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 bg-slate-950/60 rounded-xl border border-slate-800">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-xs"><i class="fab fa-youtube text-white"></i></div>
-                                <span class="font-semibold text-sm">YouTube Premium (1 Tahun)</span>
-                            </div>
-                            <span class="text-xs text-slate-400 font-bold bg-slate-800 px-2 py-1 rounded">Rp 120.000</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="py-16 px-4 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-indigo-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="relative z-10">
+            <span class="bg-indigo-500/10 text-indigo-400 text-xs font-bold px-4 py-1.5 rounded-full border border-indigo-500/20 uppercase tracking-widest">Harga Marhaen, Kualiti Kayangan</span>
+            <h1 class="text-4xl md:text-6xl font-black text-white mt-6 mb-4 leading-tight">
+                Langganan OTT Premium <br>
+                <span class="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent underline decoration-indigo-500/30">Serendah RM6 Sahaja!</span>
+            </h1>
+            <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+                Pilih pakej kegemaran anda di Necklenj Store. Sistem kami menyokong penambahan device mengikut keperluan anda. 100% Bergaransi!
+            </p>
         </div>
     </section>
 
-    <!-- 4. KEUNGGULAN (Membangun Kepercayaan) -->
-    <section id="keunggulan" class="py-20 border-t border-slate-900 bg-slate-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl font-bold text-white tracking-tight">Kenapa Harus Beli di Necklenj Store?</h2>
-                <p class="text-slate-400 text-sm sm:text-base">Kami mengutamakan kenyamanan menonton Anda tanpa gangguan akun error di tengah jalan.</p>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl space-y-3">
-                    <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 flex items-center justify-center rounded-xl text-lg"><i class="fas fa-check-circle"></i></div>
-                    <h3 class="font-bold text-white">100% Akun Legal</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Bukan hasil hack atau phising. Akun dibuat dengan metode pembayaran resmi sehingga aman digunakan.</p>
-                </div>
-                <div class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl space-y-3">
-                    <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 flex items-center justify-center rounded-xl text-lg"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="font-bold text-white">Garansi Anti-Hold</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Terjadi masalah atau 'screen limit'? Hubungi admin, langsung kami perbaiki atau ganti akun baru.</p>
-                </div>
-                <div class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl space-y-3">
-                    <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 flex items-center justify-center rounded-xl text-lg"><i class="fas fa-bolt"></i></div>
-                    <h3 class="font-bold text-white">Proses Kilat</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Setelah pembayaran terkonfirmasi, detail login (Email & Pasword) langsung dikirim lewat WhatsApp.</p>
-                </div>
-                <div class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl space-y-3">
-                    <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 flex items-center justify-center rounded-xl text-lg"><i class="fas fa-headset"></i></div>
-                    <h3 class="font-bold text-white">CS Responsif</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Ada kendala jam 11 malam? CS kami siap bantu pandu sampai aplikasi streaming Anda bisa digunakan.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. KATALOG PRODUK UTAMA -->
-    <section id="katalog" class="py-20 bg-slate-900/30 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl font-bold text-white tracking-tight">Katalog Harga Akun Premium</h2>
-                <p class="text-slate-400">Pilih aplikasi favoritmu. Semua paket di bawah sudah termasuk **Full Garansi**.</p>
-            </div>
+    <section id="katalog" class="py-12 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
             
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Produk 1: NETFLIX -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-slate-700 transition">
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-start">
-                            <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center text-xl font-black text-white shadow-lg shadow-red-600/20">N</div>
-                            <span class="bg-red-500/10 text-red-400 text-xs font-bold px-2.5 py-1 rounded-md border border-red-500/20">Best Seller</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-xl text-white">Netflix Premium UHD 4K</h3>
-                            <p class="text-slate-400 text-xs mt-1">Nonton film & series kualitas tertinggi tanpa buffer.</p>
-                        </div>
-                        <div class="pt-2">
-                            <p class="text-xs text-slate-500 line-through">Rp 186.000</p>
-                            <p class="text-2xl font-black text-indigo-400">Rp 35.000 <span class="text-xs font-normal text-slate-400">/ Bulan</span></p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Kualitas Ultra HD 4K</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Anti-Screen Limit (Sesuai Aturan)</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Bisa di HP, Laptop, Smart TV</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Garansi Penuh 30 Hari</li>
-                        </ul>
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-600/5 blur-3xl group-hover:bg-indigo-600/20 transition"></div>
+                <div>
+                    <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-2">Pakej Jimat</h3>
+                    <h2 class="text-2xl font-black text-white mb-4">Pakej 3 Bulan</h2>
+                    <div class="mb-6">
+                        <span class="text-4xl font-black text-white" id="price-p3m">RM6</span>
+                        <span class="text-slate-500 text-sm">/ 3 bulan</span>
                     </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/628xxxxxxxx?text=Halo%20Necklenj%20Store,%20saya%20mau%20order%20Netflix%20Premium%2035k" class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold py-3 rounded-xl transition">
-                            Beli via WhatsApp
-                        </a>
-                    </div>
-                </div>
+                    <ul class="space-y-3 text-sm text-slate-400 mb-8">
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Akses Full 90 Hari</li>
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Kualiti 4K UHD</li>
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Garansi Penuh 3 Bulan</li>
+                    </ul>
 
-                <!-- Produk 2: YOUTUBE PREMIUM (Highlight) -->
-                <div class="bg-slate-900 border-2 border-indigo-500 rounded-2xl overflow-hidden flex flex-col justify-between relative transform lg:-translate-y-2 shadow-xl shadow-indigo-600/5">
-                    <span class="absolute top-4 right-4 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">PROMO HEMAT</span>
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-start">
-                            <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center text-xl text-white shadow-lg shadow-red-500/20"><i class="fab fa-youtube"></i></div>
+                    <div class="bg-slate-950/50 rounded-2xl p-4 border border-slate-800 mb-6">
+                        <p class="text-xs font-bold text-slate-500 uppercase mb-3">Jumlah Device (Max 5)</p>
+                        <div class="flex items-center justify-between">
+                            <button onclick="changeDevice('p3m', -1)" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition"><i class="fas fa-minus"></i></button>
+                            <span class="text-xl font-bold text-white" id="dev-p3m">1</span>
+                            <button onclick="changeDevice('p3m', 1)" class="w-10 h-10 bg-indigo-600 hover:bg-indigo-500 rounded-lg flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-xl text-white">YouTube Premium Individual</h3>
-                            <p class="text-slate-400 text-xs mt-1">Nonton sepuasnya tanpa iklan, bisa putar di latar belakang.</p>
-                        </div>
-                        <div class="pt-2">
-                            <p class="text-xs text-slate-500 line-through">Rp 59.000</p>
-                            <p class="text-2xl font-black text-indigo-400">Rp 15.000 <span class="text-xs font-normal text-slate-400">/ Bulan</span></p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Bebas Iklan Selamanya</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Bisa Pakai Email Sendiri</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Termasuk YouTube Music Premium</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Garansi Anti On-Hold</li>
-                        </ul>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/628xxxxxxxx?text=Halo%20Necklenj%20Store,%20saya%20mau%20order%20YouTube%20Premium" class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold py-3 rounded-xl transition shadow-lg shadow-indigo-600/20">
-                            Klaim Promo WhatsApp
-                        </a>
+                        <p class="text-[10px] text-slate-500 mt-2 text-center">+RM5 per-device tambahan</p>
                     </div>
                 </div>
-
-                <!-- Produk 3: SPOTIFY -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-slate-700 transition">
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-start">
-                            <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center text-xl text-white shadow-lg shadow-emerald-600/20"><i class="fab fa-spotify"></i></div>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-xl text-white">Spotify Premium Famplan</h3>
-                            <p class="text-slate-400 text-xs mt-1">Dengarkan musik kualitas tinggi tanpa acak lagu.</p>
-                        </div>
-                        <div class="pt-2">
-                            <p class="text-xs text-slate-500 line-through">Rp 54.900</p>
-                            <p class="text-2xl font-black text-indigo-400">Rp 18.000 <span class="text-xs font-normal text-slate-400">/ Bulan</span></p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Download & Putar Offline</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Skip Lagu Tanpa Batas</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Bisa Pakai Akun Lama/Lama</li>
-                            <li><i class="fas fa-check text-emerald-500 mr-2"></i> Garansi Full Durasi</li>
-                        </ul>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/628xxxxxxxx?text=Halo%20Necklenj%20Store,%20saya%20mau%20order%20Spotify%20Premium" class="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white text-sm font-bold py-3 rounded-xl transition">
-                            Beli via WhatsApp
-                        </a>
-                    </div>
-                </div>
+                <a id="btn-p3m" href="#" class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-indigo-600/20">Beli Sekarang</a>
             </div>
+
+            <div class="bg-slate-900 border-2 border-indigo-600 rounded-3xl p-8 flex flex-col justify-between hover:border-indigo-500 transition relative transform lg:-translate-y-4 shadow-2xl shadow-indigo-600/10">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase">Paling Popular</span>
+                <div>
+                    <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-2">Pakej Stabil</h3>
+                    <h2 class="text-2xl font-black text-white mb-4">Guna Selagi Boleh</h2>
+                    <div class="mb-6">
+                        <span class="text-4xl font-black text-white" id="price-gsb">RM8</span>
+                        <span class="text-slate-500 text-sm">/ sekali bayar</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-400 mb-8">
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Akses Tanpa Had Masa</li>
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Bergantung pada Polisi OTT</li>
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Garansi 1 Bulan (Replace)</li>
+                    </ul>
+
+                    <div class="bg-slate-950/50 rounded-2xl p-4 border border-slate-800 mb-6">
+                        <p class="text-xs font-bold text-slate-500 uppercase mb-3">Jumlah Device (Max 5)</p>
+                        <div class="flex items-center justify-between">
+                            <button onclick="changeDevice('gsb', -1)" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition"><i class="fas fa-minus"></i></button>
+                            <span class="text-xl font-bold text-white" id="dev-gsb">1</span>
+                            <button onclick="changeDevice('gsb', 1)" class="w-10 h-10 bg-indigo-600 hover:bg-indigo-500 rounded-lg flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <p class="text-[10px] text-slate-500 mt-2 text-center">+RM5 per-device tambahan</p>
+                    </div>
+                </div>
+                <a id="btn-gsb" href="#" class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-indigo-600/20">Beli Sekarang</a>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition relative">
+                <div>
+                    <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-2">Pakej VIP</h3>
+                    <h2 class="text-2xl font-black text-white mb-4">Pakej Lifetime</h2>
+                    <div class="mb-6">
+                        <span class="text-4xl font-black text-white" id="price-life">RM30</span>
+                        <span class="text-slate-500 text-sm">/ seumur hidup</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-400 mb-8">
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Bayar Sekali, Nonton Selamanya</li>
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Akaun Private/Sharing VIP</li>
+                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Support Garansi Lifetime</li>
+                    </ul>
+
+                    <div class="bg-slate-950/50 rounded-2xl p-4 border border-slate-800 mb-6">
+                        <p class="text-xs font-bold text-slate-500 uppercase mb-3">Jumlah Device (Max 5)</p>
+                        <div class="flex items-center justify-between">
+                            <button onclick="changeDevice('life', -1)" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition"><i class="fas fa-minus"></i></button>
+                            <span class="text-xl font-bold text-white" id="dev-life">1</span>
+                            <button onclick="changeDevice('life', 1)" class="w-10 h-10 bg-indigo-600 hover:bg-indigo-500 rounded-lg flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <p class="text-[10px] text-slate-500 mt-2 text-center">+RM5 per-device tambahan</p>
+                    </div>
+                </div>
+                <a id="btn-life" href="#" class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-indigo-600/20">Beli Sekarang</a>
+            </div>
+
         </div>
     </section>
 
-    <!-- 6. REAL TESTIMONI CHAT -->
-    <section id="testimoni" class="py-20 bg-slate-950 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-white tracking-tight">Dua Kata Dari Pelanggan Kami</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 bg-slate-900/50 border border-slate-850 rounded-2xl space-y-3">
-                    <div class="flex text-amber-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-300 text-xs italic">"Gila sih cepet banget prosesnya, baru bayar ga nyampe 5 menit detail login netflixnya udah dikirim. Rekomen banget beli di Necklenj!"</p>
-                    <p class="text-xs font-bold text-indigo-400">- @dika_prasetya</p>
-                </div>
-                <div class="p-6 bg-slate-900/50 border border-slate-850 rounded-2xl space-y-3">
-                    <div class="flex text-amber-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-300 text-xs italic">"Kemarin spotify sempat ke-free, langsung chat adminnya langsung di-invite lagi ke famplan baru. Garansinya beneran diurus cepet. Mantap!"</p>
-                    <p class="text-xs font-bold text-indigo-400">- @clara.anastasya</p>
-                </div>
-                <div class="p-6 bg-slate-900/50 border border-slate-850 rounded-2xl space-y-3">
-                    <div class="flex text-amber-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-300 text-xs italic">"Langganan YT Premium 1 tahun di sini jauh lebih murah daripada bayar bulanan sendiri. Udah jalan 6 bulan lancar jaya gapernah kena hold."</p>
-                    <p class="text-xs font-bold text-indigo-400">- @fajarnugroho</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. FAQ (MENGHILANGKAN KERAGUAN NYATA) -->
-    <section id="faq" class="py-20 bg-slate-900/20 border-t border-slate-900">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white tracking-tight">Pertanyaan Seputar Produk</h2>
-            </div>
-            <div class="space-y-4">
-                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
-                    <h4 class="font-bold text-white text-sm sm:text-base mb-2">Apa bedanya akun SHARING dan PRIVATE?</h4>
-                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Sharing berarti 1 akun dibagi bersama pembeli lain (1 orang dapat 1 profil khusus). Sedangkan Private berarti akun sepenuhnya milik Anda sendiri tanpa dibagi dengan siapa pun.</p>
-                </div>
-                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
-                    <h4 class="font-bold text-white text-sm sm:text-base mb-2">Bagaimana cara melakukan klaim garansi?</h4>
-                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Sangat mudah! Cukup infokan email akun yang bermasalah beserta nomor invoice/chat pemesanan Anda ke WhatsApp CS kami. Admin akan memproses perbaikan secepatnya.</p>
-                </div>
-                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
-                    <h4 class="font-bold text-white text-sm sm:text-base mb-2">Apakah metode pembayarannya aman?</h4>
-                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Kami menerima pembayaran instan via QRIS (Bisa Dana, Ovo, GoPay, LinkAja) serta Transfer Bank Utama (BCA, Mandiri, BRI, BNI).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. FOOTER -->
-    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900 text-center space-y-4">
-        <div class="text-md font-bold text-white tracking-wider uppercase">NECKLENJ<span class="text-indigo-500">STORE</span></div>
-        <p class="text-xs">© 2026 Necklenj Store Indonesia. Kami tidak terafiliasi secara resmi dengan entitas Netflix, Spotify, atau YouTube. Seluruh logo dan merek dagang adalah milik pemilik masing-masing.</p>
-        <div class="flex justify-center space-x-6 text-sm pt-2">
-            <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#" class="hover:text-white transition"><i class="fab fa-whatsapp"></i> WhatsApp CS</a>
-        </div>
+    <footer class="py-12 px-4 border-t border-slate-900 text-center text-slate-500">
+        <p class="text-sm">© 2026 Necklenj Store. Harga penambahan peranti tertakluk pada terma & syarat.</p>
     </footer>
+
+    <script>
+        // Konfigurasi Harga Asas
+        const config = {
+            p3m: { base: 6, devices: 1, name: "Pakej 3 Bulan" },
+            gsb: { base: 8, devices: 1, name: "Pakej Guna Selagi Boleh" },
+            life: { base: 30, devices: 1, name: "Pakej Lifetime" }
+        };
+
+        // Nombor WhatsApp Anda
+        const noWA = "60123456789"; // GANTI DENGAN NO ANDA
+
+        function changeDevice(pkg, val) {
+            const current = config[pkg];
+            const newCount = current.devices + val;
+
+            // Had min 1, max 5
+            if (newCount >= 1 && newCount <= 5) {
+                current.devices = newCount;
+                updateDisplay(pkg);
+            }
+        }
+
+        function updateDisplay(pkg) {
+            const data = config[pkg];
+            const devEl = document.getElementById(`dev-${pkg}`);
+            const priceEl = document.getElementById(`price-${pkg}`);
+            const btnEl = document.getElementById(`btn-${pkg}`);
+
+            // Kira Harga: Harga Asas + (Device Tambahan * RM5)
+            const totalPrice = data.base + ((data.devices - 1) * 5);
+
+            // Kemaskini UI
+            devEl.innerText = data.devices;
+            priceEl.innerText = `RM${totalPrice}`;
+
+            // Kemaskini Link WhatsApp
+            const mesej = `Halo Necklenj Store! Saya nak order:\n\nProduk: ${data.name}\nJumlah Device: ${data.devices}\nTotal Harga: RM${totalPrice}\n\nMohon maklumat pembayaran ya!`;
+            const encodedMesej = encodeURIComponent(mesej);
+            btnEl.href = `https://wa.me/${noWA}?text=${encodedMesej}`;
+        }
+
+        // Jalankan updateDisplay untuk semua pakej semasa load pertama kali
+        window.onload = () => {
+            Object.keys(config).forEach(pkg => updateDisplay(pkg));
+        };
+    </script>
 
 </body>
 </html>
