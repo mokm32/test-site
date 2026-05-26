@@ -1,429 +1,424 @@
-export default function DigitalStoreLandingPage() {
-  const packages = [
-    {
-      name: 'Free Member',
-      price: 'RM0',
-      desc: 'Akses asas untuk pengguna baru',
-      features: ['7 Hari Trial', 'Akses produk free', 'Basic support'],
-    },
-    {
-      name: 'Premium Member',
-      price: 'RM25',
-      desc: 'Untuk seller dan buyer aktif',
-      features: ['30 Hari akses', 'Unlimited download', 'Priority support'],
-    },
-    {
-      name: 'VIP Member',
-      price: 'RM50',
-      desc: 'Akses penuh semua fitur premium',
-      features: ['1 Tahun akses', 'VIP badge', 'Exclusive product access'],
-    },
-  ];
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigitalStore - Produk Digital Premium</title>
 
-  const features = [
-    'Auto Delivery Produk Digital',
-    'Payment Gateway Malaysia',
-    'Download Link Protection',
-    'Admin Dashboard Lengkap',
-    'Membership & Subscription',
-    'Cloudflare Security',
-    'Telegram & WhatsApp Notification',
-    'Fast Loading & Mobile Friendly',
-  ];
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  const products = [
-    {
-      title: 'Source Code Website',
-      image:
-        'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'Premium IPTV Panel',
-      image:
-        'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'Design Template',
-      image:
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'AI Prompt Collection',
-      image:
-        'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
-    },
-  ];
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  return (
-    <div className="bg-black text-white min-h-screen font-sans">
-      {/* Navbar */}
-      <header className="border-b border-white/10 sticky top-0 z-50 bg-black/80 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold tracking-wide">
-            Digital<span className="text-cyan-400">Store</span>
-          </h1>
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-          <nav className="hidden md:flex gap-8 text-sm text-gray-300">
-            <a href="#features" className="hover:text-cyan-400 transition">
-              Features
-            </a>
-            <a href="#products" className="hover:text-cyan-400 transition">
-              Products
-            </a>
-            <a href="#pricing" className="hover:text-cyan-400 transition">
-              Membership
-            </a>
-            <a href="#contact" className="hover:text-cyan-400 transition">
-              Contact
-            </a>
-          </nav>
+    body {
+      background: #000;
+      overflow-x: hidden;
+    }
 
-          <button className="bg-cyan-500 hover:bg-cyan-400 transition px-5 py-2 rounded-xl font-semibold text-black">
-            Login
+    .glow {
+      box-shadow: 0 0 30px rgba(34, 211, 238, 0.35);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px);
+    }
+
+    .transition-all-custom {
+      transition: all 0.35s ease;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <h1 class="text-3xl font-black tracking-wide">
+        Digital<span class="text-cyan-400">Store</span>
+      </h1>
+
+      <nav class="hidden md:flex items-center gap-8 text-gray-300 font-medium">
+        <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+        <a href="#features" class="hover:text-cyan-400 transition">Features</a>
+        <a href="#products" class="hover:text-cyan-400 transition">Products</a>
+        <a href="#pricing" class="hover:text-cyan-400 transition">Membership</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+      </nav>
+
+      <button class="bg-cyan-400 hover:bg-cyan-300 text-black px-6 py-3 rounded-2xl font-bold transition-all-custom glow">
+        Login
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-32">
+
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/20 blur-[150px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/20 blur-[150px] rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+
+      <div>
+        <span class="inline-block px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-sm mb-8">
+          Platform Produk Digital Premium
+        </span>
+
+        <h2 class="text-5xl lg:text-7xl font-black leading-tight mb-8">
+          Jual Produk Digital Dengan Sistem Auto Delivery
+        </h2>
+
+        <p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-2xl">
+          Website profesional untuk menjual source code, ebook, IPTV panel,
+          template design, AI prompt, membership VIP dan pelbagai produk digital lain.
+        </p>
+
+        <div class="flex flex-wrap gap-5 mb-14">
+          <button class="bg-cyan-400 hover:bg-cyan-300 text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all-custom glow">
+            Start Selling
+          </button>
+
+          <button class="border border-white/20 hover:border-cyan-400 hover:text-cyan-400 px-8 py-4 rounded-2xl font-semibold transition-all-custom">
+            View Demo
           </button>
         </div>
-      </header>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl"></div>
-
-        <div className="max-w-7xl mx-auto px-6 py-28 relative z-10 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="grid grid-cols-3 gap-6">
           <div>
-            <span className="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm inline-block mb-6 border border-cyan-500/20">
-              Platform Produk Digital Premium
-            </span>
-
-            <h2 className="text-5xl lg:text-7xl font-black leading-tight mb-6">
-              Jual Produk Digital Dengan Sistem Auto Delivery
-            </h2>
-
-            <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl">
-              Website lengkap untuk menjual source code, template,
-              membership, IPTV panel, ebook, AI prompt dan pelbagai lagi
-              produk digital dengan sistem pembayaran automatik.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-cyan-500 hover:bg-cyan-400 transition px-7 py-4 rounded-2xl text-black font-bold text-lg shadow-lg shadow-cyan-500/30">
-                Start Selling
-              </button>
-
-              <button className="border border-white/20 hover:border-cyan-400 hover:text-cyan-400 transition px-7 py-4 rounded-2xl font-semibold">
-                View Demo
-              </button>
-            </div>
-
-            <div className="grid grid-cols-3 gap-6 mt-14">
-              <div>
-                <h3 className="text-4xl font-black text-cyan-400">10K+</h3>
-                <p className="text-gray-400 text-sm mt-2">Produk Dijual</p>
-              </div>
-
-              <div>
-                <h3 className="text-4xl font-black text-cyan-400">5K+</h3>
-                <p className="text-gray-400 text-sm mt-2">Member Aktif</p>
-              </div>
-
-              <div>
-                <h3 className="text-4xl font-black text-cyan-400">24/7</h3>
-                <p className="text-gray-400 text-sm mt-2">Auto Delivery</p>
-              </div>
-            </div>
+            <h3 class="text-4xl font-black text-cyan-400">10K+</h3>
+            <p class="text-gray-500 mt-2">Produk Dijual</p>
           </div>
 
-          <div className="relative">
-            <div className="bg-gradient-to-br from-cyan-500 to-purple-600 rounded-[40px] p-1 shadow-2xl shadow-cyan-500/20">
-              <div className="bg-zinc-900 rounded-[38px] p-8">
-                <div className="grid gap-5">
-                  <div className="bg-zinc-800 rounded-2xl p-5 border border-white/5">
-                    <div className="flex items-center justify-between mb-4">
-                      <div>
-                        <h3 className="font-bold text-lg">Auto Payment</h3>
-                        <p className="text-sm text-gray-400">
-                          ToyyibPay & Stripe Support
-                        </p>
-                      </div>
+          <div>
+            <h3 class="text-4xl font-black text-cyan-400">5K+</h3>
+            <p class="text-gray-500 mt-2">Member Aktif</p>
+          </div>
 
-                      <div className="w-14 h-14 bg-cyan-500 rounded-2xl flex items-center justify-center text-black font-black text-xl">
-                        $
-                      </div>
-                    </div>
+          <div>
+            <h3 class="text-4xl font-black text-cyan-400">24/7</h3>
+            <p class="text-gray-500 mt-2">Auto Delivery</p>
+          </div>
+        </div>
+      </div>
 
-                    <div className="h-3 rounded-full bg-zinc-700 overflow-hidden">
-                      <div className="w-4/5 h-full bg-cyan-400"></div>
-                    </div>
+      <div class="relative">
+
+        <div class="bg-gradient-to-br from-cyan-500 to-purple-600 p-[2px] rounded-[40px] glow">
+          <div class="bg-zinc-900 rounded-[38px] p-8">
+
+            <div class="space-y-5">
+
+              <div class="bg-zinc-800 rounded-3xl p-6 border border-white/5">
+                <div class="flex items-center justify-between mb-5">
+                  <div>
+                    <h3 class="text-xl font-bold">Auto Payment</h3>
+                    <p class="text-gray-400 text-sm">ToyyibPay & Stripe Support</p>
                   </div>
 
-                  <div className="bg-zinc-800 rounded-2xl p-5 border border-white/5">
-                    <div className="flex items-center justify-between mb-4">
-                      <div>
-                        <h3 className="font-bold text-lg">Secure Download</h3>
-                        <p className="text-sm text-gray-400">
-                          Protected Tokenized URL
-                        </p>
-                      </div>
+                  <div class="w-14 h-14 rounded-2xl bg-cyan-400 text-black flex items-center justify-center text-2xl font-black">
+                    $
+                  </div>
+                </div>
 
-                      <div className="w-14 h-14 bg-purple-500 rounded-2xl flex items-center justify-center text-white font-black text-xl">
-                        🔒
-                      </div>
-                    </div>
+                <div class="w-full h-3 bg-zinc-700 rounded-full overflow-hidden">
+                  <div class="w-[85%] h-full bg-cyan-400"></div>
+                </div>
+              </div>
 
-                    <div className="flex gap-3 mt-4">
-                      <div className="bg-zinc-700 px-3 py-2 rounded-xl text-sm">
-                        Cloudflare
-                      </div>
-                      <div className="bg-zinc-700 px-3 py-2 rounded-xl text-sm">
-                        Anti Bot
-                      </div>
-                    </div>
+              <div class="bg-zinc-800 rounded-3xl p-6 border border-white/5">
+                <div class="flex items-center justify-between mb-5">
+                  <div>
+                    <h3 class="text-xl font-bold">Secure Download</h3>
+                    <p class="text-gray-400 text-sm">Protected Tokenized URL</p>
                   </div>
 
-                  <div className="bg-zinc-800 rounded-2xl p-5 border border-white/5">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-bold text-lg">Membership System</h3>
-                        <p className="text-sm text-gray-400">
-                          VIP & Subscription Support
-                        </p>
-                      </div>
+                  <div class="w-14 h-14 rounded-2xl bg-purple-500 flex items-center justify-center text-2xl">
+                    🔒
+                  </div>
+                </div>
 
-                      <div className="text-green-400 font-bold text-lg">
-                        ACTIVE
-                      </div>
-                    </div>
+                <div class="flex gap-3 mt-4">
+                  <span class="bg-zinc-700 px-4 py-2 rounded-xl text-sm">Cloudflare</span>
+                  <span class="bg-zinc-700 px-4 py-2 rounded-xl text-sm">Anti Bot</span>
+                </div>
+              </div>
+
+              <div class="bg-zinc-800 rounded-3xl p-6 border border-white/5">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="text-xl font-bold">Membership System</h3>
+                    <p class="text-gray-400 text-sm">VIP & Subscription Support</p>
+                  </div>
+
+                  <div class="text-green-400 font-bold text-lg">
+                    ACTIVE
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Features */}
-      <section id="features" className="py-24 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-5xl font-black mb-6">
-              Powerful Features
-            </h2>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              Semua fitur penting untuk membina platform jualan produk digital
-              moden dan premium.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-zinc-900 border border-white/5 hover:border-cyan-500/40 transition rounded-3xl p-7"
-              >
-                <div className="w-14 h-14 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 text-2xl mb-6">
-                  ⚡
-                </div>
-
-                <h3 className="font-bold text-lg leading-relaxed">
-                  {feature}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Products */}
-      <section id="products" className="py-24 bg-zinc-950">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
-            <div>
-              <h2 className="text-5xl font-black mb-6">
-                Popular Digital Products
-              </h2>
-              <p className="text-gray-400 text-lg max-w-2xl">
-                Platform support pelbagai jenis produk digital untuk dijual
-                secara automatik.
-              </p>
-            </div>
-
-            <button className="border border-cyan-500 text-cyan-400 px-6 py-3 rounded-2xl hover:bg-cyan-500 hover:text-black transition font-semibold">
-              Explore Products
-            </button>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-7">
-            {products.map((product, index) => (
-              <div
-                key={index}
-                className="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition group"
-              >
-                <div className="overflow-hidden h-60">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="font-bold text-xl mb-3">{product.title}</h3>
-
-                  <button className="mt-4 w-full bg-cyan-500 hover:bg-cyan-400 transition text-black py-3 rounded-2xl font-bold">
-                    View Product
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section id="pricing" className="py-24 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-5xl font-black mb-6">
-              Membership Packages
-            </h2>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              Pilih pakej membership yang sesuai untuk akses premium dan fitur
-              tambahan.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {packages.map((item, index) => (
-              <div
-                key={index}
-                className={`rounded-[32px] p-8 border ${
-                  index === 1
-                    ? 'bg-cyan-500 text-black border-cyan-400 scale-105'
-                    : 'bg-zinc-900 border-white/5'
-                }`}
-              >
-                <div className="mb-8">
-                  <h3 className="text-2xl font-black mb-2">{item.name}</h3>
-                  <p
-                    className={`text-sm ${
-                      index === 1 ? 'text-black/70' : 'text-gray-400'
-                    }`}
-                  >
-                    {item.desc}
-                  </p>
-                </div>
-
-                <div className="text-6xl font-black mb-8">{item.price}</div>
-
-                <div className="space-y-4 mb-10">
-                  {item.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div
-                        className={`w-6 h-6 rounded-full flex items-center justify-center text-sm ${
-                          index === 1
-                            ? 'bg-black text-cyan-400'
-                            : 'bg-cyan-500 text-black'
-                        }`}
-                      >
-                        ✓
-                      </div>
-
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <button
-                  className={`w-full py-4 rounded-2xl font-bold transition ${
-                    index === 1
-                      ? 'bg-black text-white hover:bg-zinc-900'
-                      : 'bg-cyan-500 text-black hover:bg-cyan-400'
-                  }`}
-                >
-                  Get Started
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500 to-purple-600">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-black text-black mb-6">
-            Mulakan Platform Produk Digital Anda Hari Ini
-          </h2>
-
-          <p className="text-black/80 text-lg max-w-3xl mx-auto leading-relaxed mb-10">
-            Bina sistem jualan produk digital profesional lengkap dengan auto
-            payment, auto delivery dan membership system.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-5">
-            <button className="bg-black hover:bg-zinc-900 transition px-8 py-4 rounded-2xl font-bold text-white text-lg">
-              Launch Website
-            </button>
-
-            <button className="bg-white hover:bg-gray-200 transition px-8 py-4 rounded-2xl font-bold text-black text-lg">
-              Contact Support
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer
-        id="contact"
-        className="border-t border-white/5 bg-black py-16"
-      >
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 gap-12">
-          <div>
-            <h2 className="text-3xl font-black mb-4">
-              Digital<span className="text-cyan-400">Store</span>
-            </h2>
-
-            <p className="text-gray-400 leading-relaxed">
-              Platform jualan produk digital moden dengan sistem automasi penuh.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-bold text-lg mb-5">Navigation</h3>
-
-            <div className="space-y-3 text-gray-400">
-              <p>Home</p>
-              <p>Products</p>
-              <p>Membership</p>
-              <p>Contact</p>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="font-bold text-lg mb-5">Features</h3>
-
-            <div className="space-y-3 text-gray-400">
-              <p>Auto Delivery</p>
-              <p>Payment Gateway</p>
-              <p>Admin Dashboard</p>
-              <p>Cloudflare Security</p>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="font-bold text-lg mb-5">Contact</h3>
-
-            <div className="space-y-3 text-gray-400">
-              <p>support@digitalstore.com</p>
-              <p>Telegram Support</p>
-              <p>WhatsApp Support</p>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center text-gray-500 text-sm">
-          © 2026 DigitalStore. All Rights Reserved.
-        </div>
-      </footer>
+      </div>
     </div>
-  );
-}
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-5xl font-black mb-6">Powerful Features</h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Semua fitur penting untuk membina platform jualan produk digital moden.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-zinc-900 rounded-3xl p-8 border border-white/5 hover:border-cyan-500/40 transition-all-custom card-hover">
+          <div class="text-4xl mb-6">⚡</div>
+          <h3 class="font-bold text-xl mb-3">Auto Delivery</h3>
+          <p class="text-gray-400">Sistem automatik hantar produk selepas pembayaran berjaya.</p>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl p-8 border border-white/5 hover:border-cyan-500/40 transition-all-custom card-hover">
+          <div class="text-4xl mb-6">💳</div>
+          <h3 class="font-bold text-xl mb-3">Payment Gateway</h3>
+          <p class="text-gray-400">Support ToyyibPay, Stripe, PayPal dan crypto payment.</p>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl p-8 border border-white/5 hover:border-cyan-500/40 transition-all-custom card-hover">
+          <div class="text-4xl mb-6">🔐</div>
+          <h3 class="font-bold text-xl mb-3">Secure Download</h3>
+          <p class="text-gray-400">Tokenized URL dan anti share system untuk produk digital.</p>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl p-8 border border-white/5 hover:border-cyan-500/40 transition-all-custom card-hover">
+          <div class="text-4xl mb-6">👑</div>
+          <h3 class="font-bold text-xl mb-3">Membership System</h3>
+          <p class="text-gray-400">Support subscription, VIP member dan recurring payment.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-28 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex flex-col lg:flex-row justify-between gap-8 items-end mb-16">
+        <div>
+          <h2 class="text-5xl font-black mb-6">Popular Digital Products</h2>
+          <p class="text-gray-400 text-lg max-w-2xl">
+            Pelbagai jenis produk digital boleh dijual secara automatik.
+          </p>
+        </div>
+
+        <button class="border border-cyan-500 text-cyan-400 hover:bg-cyan-400 hover:text-black px-6 py-3 rounded-2xl font-semibold transition-all-custom">
+          Explore Products
+        </button>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-7">
+
+        <div class="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all-custom card-hover">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" class="w-full h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Source Code</h3>
+            <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-3 rounded-2xl font-bold transition-all-custom">
+              View Product
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all-custom card-hover">
+          <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1200&auto=format&fit=crop" class="w-full h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">IPTV Panel</h3>
+            <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-3 rounded-2xl font-bold transition-all-custom">
+              View Product
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all-custom card-hover">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" class="w-full h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">Design Template</h3>
+            <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-3 rounded-2xl font-bold transition-all-custom">
+              View Product
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all-custom card-hover">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" class="w-full h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-4">AI Prompt</h3>
+            <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-3 rounded-2xl font-bold transition-all-custom">
+              View Product
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-5xl font-black mb-6">Membership Packages</h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Pilih pakej membership untuk akses premium.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <div class="bg-zinc-900 border border-white/5 rounded-[32px] p-8">
+          <h3 class="text-3xl font-black mb-3">Free Trial</h3>
+          <p class="text-gray-400 mb-8">Untuk pengguna baru</p>
+          <div class="text-6xl font-black mb-10">RM0</div>
+
+          <div class="space-y-4 mb-10">
+            <div>✓ 7 Hari Trial</div>
+            <div>✓ Basic Access</div>
+            <div>✓ Limited Download</div>
+          </div>
+
+          <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-4 rounded-2xl font-bold transition-all-custom">
+            Start Free
+          </button>
+        </div>
+
+        <div class="bg-cyan-400 text-black rounded-[32px] p-8 scale-105 glow">
+          <h3 class="text-3xl font-black mb-3">Premium</h3>
+          <p class="text-black/70 mb-8">Untuk seller aktif</p>
+          <div class="text-6xl font-black mb-10">RM25</div>
+
+          <div class="space-y-4 mb-10 font-medium">
+            <div>✓ 30 Hari Access</div>
+            <div>✓ Unlimited Download</div>
+            <div>✓ Priority Support</div>
+          </div>
+
+          <button class="w-full bg-black hover:bg-zinc-900 text-white py-4 rounded-2xl font-bold transition-all-custom">
+            Buy Premium
+          </button>
+        </div>
+
+        <div class="bg-zinc-900 border border-white/5 rounded-[32px] p-8">
+          <h3 class="text-3xl font-black mb-3">VIP</h3>
+          <p class="text-gray-400 mb-8">Akses penuh premium</p>
+          <div class="text-6xl font-black mb-10">RM50</div>
+
+          <div class="space-y-4 mb-10">
+            <div>✓ 1 Tahun Access</div>
+            <div>✓ VIP Badge</div>
+            <div>✓ Exclusive Product</div>
+          </div>
+
+          <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-4 rounded-2xl font-bold transition-all-custom">
+            Buy VIP
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-28 bg-gradient-to-r from-cyan-500 to-purple-600 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <h2 class="text-5xl font-black text-black mb-6">
+        Mulakan Website Produk Digital Anda Hari Ini
+      </h2>
+
+      <p class="text-black/80 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+        Bina platform jualan digital profesional dengan auto payment, auto delivery dan membership system.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-5">
+        <button class="bg-black hover:bg-zinc-900 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all-custom">
+          Launch Website
+        </button>
+
+        <button class="bg-white hover:bg-gray-200 text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all-custom">
+          Contact Support
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="border-t border-white/5 py-16 bg-black">
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 gap-12">
+
+      <div>
+        <h2 class="text-3xl font-black mb-4">
+          Digital<span class="text-cyan-400">Store</span>
+        </h2>
+
+        <p class="text-gray-400 leading-relaxed">
+          Platform jualan produk digital moden dan premium.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-5">Navigation</h3>
+
+        <div class="space-y-3 text-gray-400">
+          <p>Home</p>
+          <p>Products</p>
+          <p>Membership</p>
+          <p>Contact</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-5">Features</h3>
+
+        <div class="space-y-3 text-gray-400">
+          <p>Auto Delivery</p>
+          <p>Payment Gateway</p>
+          <p>Cloudflare Security</p>
+          <p>Admin Dashboard</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-5">Support</h3>
+
+        <div class="space-y-3 text-gray-400">
+          <p>support@digitalstore.com</p>
+          <p>Telegram Support</p>
+          <p>WhatsApp Support</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-8 mt-12 border-t border-white/5 text-center text-gray-500 text-sm">
+      © 2026 DigitalStore. All Rights Reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>
