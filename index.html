@@ -3,422 +3,703 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DigitalStore - Produk Digital Premium</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
+  <title>OTT Navigator Premium ID</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
     }
 
     body {
-      background: #000;
+      background: #050816;
+      color: white;
       overflow-x: hidden;
     }
 
-    .glow {
-      box-shadow: 0 0 30px rgba(34, 211, 238, 0.35);
+    html {
+      scroll-behavior: smooth;
     }
 
-    .card-hover:hover {
-      transform: translateY(-8px);
+    .bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background:
+      radial-gradient(circle at top left, rgba(0,255,255,0.15), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(255,0,255,0.12), transparent 30%),
+      #050816;
+      z-index: -1;
     }
 
-    .transition-all-custom {
-      transition: all 0.35s ease;
+    header {
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.3);
+      z-index: 999;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: cyan;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: cyan;
+    }
+
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 8%;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      background: rgba(0,255,255,0.15);
+      border: 1px solid cyan;
+      border-radius: 999px;
+      color: cyan;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .hero-text h1 {
+      font-size: 65px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: cyan;
+    }
+
+    .hero-text p {
+      color: #cfcfcf;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: cyan;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px cyan;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      border-color: cyan;
+      color: cyan;
+    }
+
+    .hero-card {
+      flex: 1;
+      min-width: 320px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 0 40px rgba(0,255,255,0.08);
+    }
+
+    .hero-card h2 {
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+    }
+
+    .hero-card ul li {
+      margin-bottom: 18px;
+      color: #ddd;
+      font-size: 16px;
+    }
+
+    .countdown {
+      margin-top: 30px;
+      background: rgba(255,0,100,0.15);
+      padding: 18px;
+      border-radius: 15px;
+      border: 1px solid rgba(255,0,100,0.4);
+      text-align: center;
+    }
+
+    .countdown h3 {
+      margin-bottom: 10px;
+      color: #ff4f89;
+    }
+
+    section {
+      padding: 100px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .section-title h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #bbb;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .price-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 25px;
+      padding: 40px 30px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-card:hover {
+      transform: translateY(-10px);
+      border-color: cyan;
+      box-shadow: 0 0 30px rgba(0,255,255,0.15);
+    }
+
+    .popular {
+      border: 2px solid cyan;
+      transform: scale(1.03);
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: 15px;
+      right: -40px;
+      background: cyan;
+      color: black;
+      width: 160px;
+      text-align: center;
+      transform: rotate(45deg);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px;
+    }
+
+    .price-card h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 55px;
+      font-weight: 800;
+      color: cyan;
+      margin-bottom: 20px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 20px;
+      margin-left: 8px;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .price-card ul li {
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-box {
+      background: rgba(255,255,255,0.05);
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      border-color: cyan;
+    }
+
+    .feature-box h3 {
+      margin: 20px 0 15px;
+      font-size: 24px;
+    }
+
+    .feature-box p {
+      color: #cfcfcf;
+      line-height: 1.8;
+    }
+
+    .tutorial {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .tutorial-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 35px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .tutorial-card span {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: cyan;
+      color: black;
+      border-radius: 50%;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .faq {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: rgba(255,255,255,0.05);
+      margin-bottom: 20px;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .faq-item h3 {
+      margin-bottom: 12px;
+      color: cyan;
+    }
+
+    .faq-item p {
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(0,255,255,0.12), rgba(255,0,255,0.08));
+      padding: 60px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-box h2 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      color: #ddd;
+      margin-bottom: 35px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      color: #888;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 25px rgba(37,211,102,0.5);
+      z-index: 999;
+    }
+
+    @media(max-width: 768px) {
+      .hero-text h1 {
+        font-size: 45px;
+      }
+
+      .section-title h2 {
+        font-size: 36px;
+      }
+
+      .contact-box h2 {
+        font-size: 34px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 10px;
+      }
     }
   </style>
 </head>
-<body class="bg-black text-white">
+<body>
 
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="bg"></div>
 
-      <h1 class="text-3xl font-black tracking-wide">
-        Digital<span class="text-cyan-400">Store</span>
-      </h1>
+<header>
+  <div class="logo">Necklnj OTT</div>
 
-      <nav class="hidden md:flex items-center gap-8 text-gray-300 font-medium">
-        <a href="#home" class="hover:text-cyan-400 transition">Home</a>
-        <a href="#features" class="hover:text-cyan-400 transition">Features</a>
-        <a href="#products" class="hover:text-cyan-400 transition">Products</a>
-        <a href="#pricing" class="hover:text-cyan-400 transition">Membership</a>
-        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
-      </nav>
+  <nav>
+    <a href="#pricing">Pakej</a>
+    <a href="#features">Kelebihan</a>
+    <a href="#tutorial">Tutorial</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-      <button class="bg-cyan-400 hover:bg-cyan-300 text-black px-6 py-3 rounded-2xl font-bold transition-all-custom glow">
-        Login
-      </button>
+<section class="hero">
+
+  <div class="hero-text">
+    <div class="badge">PREMIUM IPTV ACCESS</div>
+
+    <h1>
+      Jual ID <span>OTT Navigator</span><br>
+      Murah & Premium
+    </h1>
+
+    <p>
+      Nikmati akses live TV, movie, sports dan entertainment premium dengan setup mudah.
+      Support Android TV, TV Box, smartphone dan pelbagai device.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#pricing" class="btn btn-primary">Order Sekarang</a>
+      <a href="#tutorial" class="btn btn-secondary">Tutorial Setup</a>
     </div>
-  </header>
+  </div>
 
-  <!-- Hero -->
-  <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-32">
+  <div class="hero-card">
+    <h2>Kelebihan Servis</h2>
 
-    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/20 blur-[150px] rounded-full"></div>
-    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/20 blur-[150px] rounded-full"></div>
+    <ul>
+      <li>✔ Fast Delivery</li>
+      <li>✔ Support Android TV & TV Box</li>
+      <li>✔ Auto Setup Playlist</li>
+      <li>✔ Private Premium Access</li>
+      <li>✔ Streaming Smooth</li>
+      <li>✔ Support 24/7</li>
+    </ul>
 
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
-
-      <div>
-        <span class="inline-block px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-sm mb-8">
-          Platform Produk Digital Premium
-        </span>
-
-        <h2 class="text-5xl lg:text-7xl font-black leading-tight mb-8">
-          Jual Produk Digital Dengan Sistem Auto Delivery
-        </h2>
-
-        <p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-2xl">
-          Website profesional untuk menjual source code, ebook, IPTV panel,
-          template design, AI prompt, membership VIP dan pelbagai produk digital lain.
-        </p>
-
-        <div class="flex flex-wrap gap-5 mb-14">
-          <button class="bg-cyan-400 hover:bg-cyan-300 text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all-custom glow">
-            Start Selling
-          </button>
-
-          <button class="border border-white/20 hover:border-cyan-400 hover:text-cyan-400 px-8 py-4 rounded-2xl font-semibold transition-all-custom">
-            View Demo
-          </button>
-        </div>
-
-        <div class="grid grid-cols-3 gap-6">
-          <div>
-            <h3 class="text-4xl font-black text-cyan-400">10K+</h3>
-            <p class="text-gray-500 mt-2">Produk Dijual</p>
-          </div>
-
-          <div>
-            <h3 class="text-4xl font-black text-cyan-400">5K+</h3>
-            <p class="text-gray-500 mt-2">Member Aktif</p>
-          </div>
-
-          <div>
-            <h3 class="text-4xl font-black text-cyan-400">24/7</h3>
-            <p class="text-gray-500 mt-2">Auto Delivery</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="relative">
-
-        <div class="bg-gradient-to-br from-cyan-500 to-purple-600 p-[2px] rounded-[40px] glow">
-          <div class="bg-zinc-900 rounded-[38px] p-8">
-
-            <div class="space-y-5">
-
-              <div class="bg-zinc-800 rounded-3xl p-6 border border-white/5">
-                <div class="flex items-center justify-between mb-5">
-                  <div>
-                    <h3 class="text-xl font-bold">Auto Payment</h3>
-                    <p class="text-gray-400 text-sm">ToyyibPay & Stripe Support</p>
-                  </div>
-
-                  <div class="w-14 h-14 rounded-2xl bg-cyan-400 text-black flex items-center justify-center text-2xl font-black">
-                    $
-                  </div>
-                </div>
-
-                <div class="w-full h-3 bg-zinc-700 rounded-full overflow-hidden">
-                  <div class="w-[85%] h-full bg-cyan-400"></div>
-                </div>
-              </div>
-
-              <div class="bg-zinc-800 rounded-3xl p-6 border border-white/5">
-                <div class="flex items-center justify-between mb-5">
-                  <div>
-                    <h3 class="text-xl font-bold">Secure Download</h3>
-                    <p class="text-gray-400 text-sm">Protected Tokenized URL</p>
-                  </div>
-
-                  <div class="w-14 h-14 rounded-2xl bg-purple-500 flex items-center justify-center text-2xl">
-                    🔒
-                  </div>
-                </div>
-
-                <div class="flex gap-3 mt-4">
-                  <span class="bg-zinc-700 px-4 py-2 rounded-xl text-sm">Cloudflare</span>
-                  <span class="bg-zinc-700 px-4 py-2 rounded-xl text-sm">Anti Bot</span>
-                </div>
-              </div>
-
-              <div class="bg-zinc-800 rounded-3xl p-6 border border-white/5">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <h3 class="text-xl font-bold">Membership System</h3>
-                    <p class="text-gray-400 text-sm">VIP & Subscription Support</p>
-                  </div>
-
-                  <div class="text-green-400 font-bold text-lg">
-                    ACTIVE
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
+    <div class="countdown">
+      <h3>PROMO LIFETIME RM10</h3>
+      <p>Tawaran masa terhad untuk pelanggan baru.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- Features -->
-  <section id="features" class="py-28 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-6">
+</section>
 
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-5xl font-black mb-6">Powerful Features</h2>
-        <p class="text-gray-400 text-lg leading-relaxed">
-          Semua fitur penting untuk membina platform jualan produk digital moden.
-        </p>
-      </div>
+<section id="pricing">
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div class="section-title">
+    <h2>Pilihan Pakej</h2>
+    <p>Pilih pakej mengikut keperluan anda</p>
+  </div>
 
-        <div class="bg-zinc-900 rounded-3xl p-8 border border-white/5 hover:border-cyan-500/40 transition-all-custom card-hover">
-          <div class="text-4xl mb-6">⚡</div>
-          <h3 class="font-bold text-xl mb-3">Auto Delivery</h3>
-          <p class="text-gray-400">Sistem automatik hantar produk selepas pembayaran berjaya.</p>
-        </div>
+  <div class="pricing">
 
-        <div class="bg-zinc-900 rounded-3xl p-8 border border-white/5 hover:border-cyan-500/40 transition-all-custom card-hover">
-          <div class="text-4xl mb-6">💳</div>
-          <h3 class="font-bold text-xl mb-3">Payment Gateway</h3>
-          <p class="text-gray-400">Support ToyyibPay, Stripe, PayPal dan crypto payment.</p>
-        </div>
+    <div class="price-card">
+      <h3>3 Bulan</h3>
+      <div class="price">RM6</div>
 
-        <div class="bg-zinc-900 rounded-3xl p-8 border border-white/5 hover:border-cyan-500/40 transition-all-custom card-hover">
-          <div class="text-4xl mb-6">🔐</div>
-          <h3 class="font-bold text-xl mb-3">Secure Download</h3>
-          <p class="text-gray-400">Tokenized URL dan anti share system untuk produk digital.</p>
-        </div>
+      <ul>
+        <li>✔ Valid 3 Bulan</li>
+        <li>✔ Support Android</li>
+        <li>✔ Playlist Premium</li>
+        <li>✔ Support Setup</li>
+      </ul>
 
-        <div class="bg-zinc-900 rounded-3xl p-8 border border-white/5 hover:border-cyan-500/40 transition-all-custom card-hover">
-          <div class="text-4xl mb-6">👑</div>
-          <h3 class="font-bold text-xl mb-3">Membership System</h3>
-          <p class="text-gray-400">Support subscription, VIP member dan recurring payment.</p>
-        </div>
-
-      </div>
+      <a href="https://wa.me/601136237443" class="btn btn-primary">Order Sekarang</a>
     </div>
-  </section>
 
-  <!-- Products -->
-  <section id="products" class="py-28 bg-zinc-950">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="price-card popular">
+      <div class="popular-tag">POPULAR</div>
 
-      <div class="flex flex-col lg:flex-row justify-between gap-8 items-end mb-16">
-        <div>
-          <h2 class="text-5xl font-black mb-6">Popular Digital Products</h2>
-          <p class="text-gray-400 text-lg max-w-2xl">
-            Pelbagai jenis produk digital boleh dijual secara automatik.
-          </p>
-        </div>
+      <h3>Guna Selagi Boleh</h3>
+      <div class="price">RM8</div>
 
-        <button class="border border-cyan-500 text-cyan-400 hover:bg-cyan-400 hover:text-black px-6 py-3 rounded-2xl font-semibold transition-all-custom">
-          Explore Products
-        </button>
-      </div>
+      <ul>
+        <li>✔ Unlimited Access</li>
+        <li>✔ Premium Channel</li>
+        <li>✔ Fast Setup</li>
+        <li>✔ Support 24/7</li>
+      </ul>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-7">
-
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all-custom card-hover">
-          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" class="w-full h-60 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-4">Source Code</h3>
-            <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-3 rounded-2xl font-bold transition-all-custom">
-              View Product
-            </button>
-          </div>
-        </div>
-
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all-custom card-hover">
-          <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1200&auto=format&fit=crop" class="w-full h-60 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-4">IPTV Panel</h3>
-            <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-3 rounded-2xl font-bold transition-all-custom">
-              View Product
-            </button>
-          </div>
-        </div>
-
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all-custom card-hover">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" class="w-full h-60 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-4">Design Template</h3>
-            <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-3 rounded-2xl font-bold transition-all-custom">
-              View Product
-            </button>
-          </div>
-        </div>
-
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all-custom card-hover">
-          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" class="w-full h-60 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-4">AI Prompt</h3>
-            <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-3 rounded-2xl font-bold transition-all-custom">
-              View Product
-            </button>
-          </div>
-        </div>
-
-      </div>
+      <a href="https://wa.me/601136237443" class="btn btn-primary">Order Sekarang</a>
     </div>
-  </section>
 
-  <!-- Pricing -->
-  <section id="pricing" class="py-28 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="price-card">
+      <h3>Lifetime</h3>
 
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-5xl font-black mb-6">Membership Packages</h2>
-        <p class="text-gray-400 text-lg leading-relaxed">
-          Pilih pakej membership untuk akses premium.
-        </p>
+      <div class="price">
+        RM10
+        <span class="old-price">RM30</span>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-8">
+      <ul>
+        <li>✔ Lifetime Access</li>
+        <li>✔ Priority Support</li>
+        <li>✔ Premium Playlist</li>
+        <li>✔ Best Value Package</li>
+      </ul>
 
-        <div class="bg-zinc-900 border border-white/5 rounded-[32px] p-8">
-          <h3 class="text-3xl font-black mb-3">Free Trial</h3>
-          <p class="text-gray-400 mb-8">Untuk pengguna baru</p>
-          <div class="text-6xl font-black mb-10">RM0</div>
-
-          <div class="space-y-4 mb-10">
-            <div>✓ 7 Hari Trial</div>
-            <div>✓ Basic Access</div>
-            <div>✓ Limited Download</div>
-          </div>
-
-          <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-4 rounded-2xl font-bold transition-all-custom">
-            Start Free
-          </button>
-        </div>
-
-        <div class="bg-cyan-400 text-black rounded-[32px] p-8 scale-105 glow">
-          <h3 class="text-3xl font-black mb-3">Premium</h3>
-          <p class="text-black/70 mb-8">Untuk seller aktif</p>
-          <div class="text-6xl font-black mb-10">RM25</div>
-
-          <div class="space-y-4 mb-10 font-medium">
-            <div>✓ 30 Hari Access</div>
-            <div>✓ Unlimited Download</div>
-            <div>✓ Priority Support</div>
-          </div>
-
-          <button class="w-full bg-black hover:bg-zinc-900 text-white py-4 rounded-2xl font-bold transition-all-custom">
-            Buy Premium
-          </button>
-        </div>
-
-        <div class="bg-zinc-900 border border-white/5 rounded-[32px] p-8">
-          <h3 class="text-3xl font-black mb-3">VIP</h3>
-          <p class="text-gray-400 mb-8">Akses penuh premium</p>
-          <div class="text-6xl font-black mb-10">RM50</div>
-
-          <div class="space-y-4 mb-10">
-            <div>✓ 1 Tahun Access</div>
-            <div>✓ VIP Badge</div>
-            <div>✓ Exclusive Product</div>
-          </div>
-
-          <button class="w-full bg-cyan-400 hover:bg-cyan-300 text-black py-4 rounded-2xl font-bold transition-all-custom">
-            Buy VIP
-          </button>
-        </div>
-
-      </div>
+      <a href="https://wa.me/601136237443" class="btn btn-primary">Claim Promo</a>
     </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="py-28 bg-gradient-to-r from-cyan-500 to-purple-600 text-center">
-    <div class="max-w-5xl mx-auto px-6">
+  </div>
 
-      <h2 class="text-5xl font-black text-black mb-6">
-        Mulakan Website Produk Digital Anda Hari Ini
-      </h2>
+</section>
 
-      <p class="text-black/80 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
-        Bina platform jualan digital profesional dengan auto payment, auto delivery dan membership system.
+<section id="features">
+
+  <div class="section-title">
+    <h2>Kenapa Pilih Kami?</h2>
+    <p>Servis premium dengan pengalaman terbaik</p>
+  </div>
+
+  <div class="features">
+
+    <div class="feature-box">
+      <h3>⚡ Fast Delivery</h3>
+      <p>
+        ID dihantar dengan cepat selepas payment berjaya.
       </p>
-
-      <div class="flex flex-wrap justify-center gap-5">
-        <button class="bg-black hover:bg-zinc-900 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all-custom">
-          Launch Website
-        </button>
-
-        <button class="bg-white hover:bg-gray-200 text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all-custom">
-          Contact Support
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contact" class="border-t border-white/5 py-16 bg-black">
-
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 gap-12">
-
-      <div>
-        <h2 class="text-3xl font-black mb-4">
-          Digital<span class="text-cyan-400">Store</span>
-        </h2>
-
-        <p class="text-gray-400 leading-relaxed">
-          Platform jualan produk digital moden dan premium.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-xl mb-5">Navigation</h3>
-
-        <div class="space-y-3 text-gray-400">
-          <p>Home</p>
-          <p>Products</p>
-          <p>Membership</p>
-          <p>Contact</p>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-xl mb-5">Features</h3>
-
-        <div class="space-y-3 text-gray-400">
-          <p>Auto Delivery</p>
-          <p>Payment Gateway</p>
-          <p>Cloudflare Security</p>
-          <p>Admin Dashboard</p>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-xl mb-5">Support</h3>
-
-        <div class="space-y-3 text-gray-400">
-          <p>support@digitalstore.com</p>
-          <p>Telegram Support</p>
-          <p>WhatsApp Support</p>
-        </div>
-      </div>
-
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 pt-8 mt-12 border-t border-white/5 text-center text-gray-500 text-sm">
-      © 2026 DigitalStore. All Rights Reserved.
+    <div class="feature-box">
+      <h3>📺 Premium Channel</h3>
+      <p>
+        Support live TV, sports, movie dan entertainment premium.
+      </p>
     </div>
 
-  </footer>
+    <div class="feature-box">
+      <h3>📱 Multi Device</h3>
+      <p>
+        Boleh digunakan pada Android TV, TV Box dan smartphone.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🔒 Private Access</h3>
+      <p>
+        Sistem login selamat dan stabil untuk pelanggan.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🚀 Smooth Streaming</h3>
+      <p>
+        Streaming lebih lancar dengan server premium.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <h3>💬 Full Support</h3>
+      <p>
+        Bantuan setup dan support pelanggan tersedia.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="tutorial">
+
+  <div class="section-title">
+    <h2>Cara Setup</h2>
+    <p>Ikut langkah mudah untuk mula menonton</p>
+  </div>
+
+  <div class="tutorial">
+
+    <div class="tutorial-card">
+      <span>1</span>
+      <h3>Install Apps</h3>
+      <p>Download dan install OTT Navigator pada device anda.</p>
+    </div>
+
+    <div class="tutorial-card">
+      <span>2</span>
+      <h3>Setup ID</h3>
+      <p>Setting → Provider → Add Provider → Playlist → URL → Paste ID → Apply</p>
+    </div>
+
+    <div class="tutorial-card">
+      <span>3</span>
+      <h3>Setup EPG</h3>
+      <p>Setting → Teleguide EPG → User-Provider → Paste URL → Trust → Reload.</p>
+    </div>
+
+    <div class="tutorial-card">
+      <span>4</span>
+      <h3>Enjoy Streaming</h3>
+      <p>Nikmati live TV, movie dan sports tanpa gangguan.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="faq">
+
+  <div class="section-title">
+    <h2>FAQ</h2>
+    <p>Soalan yang selalu ditanya pelanggan</p>
+  </div>
+
+  <div class="faq">
+
+    <div class="faq-item">
+      <h3>Perlu guna VPN?</h3>
+      <p>
+        Tidak semestinya. Kebanyakan device boleh terus login dan menonton.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Support Smart TV?</h3>
+      <p>
+        Ya, support Android TV, TV Box dan smartphone Android.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Macam mana nak dapat ID?</h3>
+      <p>
+        Selepas payment berjaya, admin akan hantar ID melalui WhatsApp.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Ada support setup?</h3>
+      <p>
+        Ya, tutorial dan bantuan setup disediakan.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <div class="contact-box">
+    <h2>Ready Untuk Order?</h2>
+
+    <p>
+      Dapatkan akses premium sekarang dengan harga promosi.
+    </p>
+
+    <a href="https://wa.me/601136237443" class="btn btn-primary">
+      WhatsApp Admin
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 OTT VIP STORE • All Rights Reserved
+</footer>
+
+<a href="https://wa.me/601136237443" class="floating-wa">
+  ☎
+</a>
 
 </body>
 </html>
