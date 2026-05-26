@@ -1,182 +1,429 @@
-<!DOCTYPE html>
-<html lang="ms" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Necklenj Store - Pakej OTT Termurah Malaysia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); }
-    </style>
-</head>
-<body class="bg-slate-950 text-slate-100 antialiased">
+export default function DigitalStoreLandingPage() {
+  const packages = [
+    {
+      name: 'Free Member',
+      price: 'RM0',
+      desc: 'Akses asas untuk pengguna baru',
+      features: ['7 Hari Trial', 'Akses produk free', 'Basic support'],
+    },
+    {
+      name: 'Premium Member',
+      price: 'RM25',
+      desc: 'Untuk seller dan buyer aktif',
+      features: ['30 Hari akses', 'Unlimited download', 'Priority support'],
+    },
+    {
+      name: 'VIP Member',
+      price: 'RM50',
+      desc: 'Akses penuh semua fitur premium',
+      features: ['1 Tahun akses', 'VIP badge', 'Exclusive product access'],
+    },
+  ];
 
-    <header class="sticky top-0 z-50 glass border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center font-black text-white">N</div>
-                <span class="text-xl font-extrabold text-white uppercase tracking-tighter">NECKLENJ<span class="text-indigo-500">STORE</span></span>
-            </div>
-            <a href="#katalog" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-lg font-bold text-sm transition">Beli Sekarang</a>
+  const features = [
+    'Auto Delivery Produk Digital',
+    'Payment Gateway Malaysia',
+    'Download Link Protection',
+    'Admin Dashboard Lengkap',
+    'Membership & Subscription',
+    'Cloudflare Security',
+    'Telegram & WhatsApp Notification',
+    'Fast Loading & Mobile Friendly',
+  ];
+
+  const products = [
+    {
+      title: 'Source Code Website',
+      image:
+        'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      title: 'Premium IPTV Panel',
+      image:
+        'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      title: 'Design Template',
+      image:
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      title: 'AI Prompt Collection',
+      image:
+        'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
+    },
+  ];
+
+  return (
+    <div className="bg-black text-white min-h-screen font-sans">
+      {/* Navbar */}
+      <header className="border-b border-white/10 sticky top-0 z-50 bg-black/80 backdrop-blur">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <h1 className="text-2xl font-bold tracking-wide">
+            Digital<span className="text-cyan-400">Store</span>
+          </h1>
+
+          <nav className="hidden md:flex gap-8 text-sm text-gray-300">
+            <a href="#features" className="hover:text-cyan-400 transition">
+              Features
+            </a>
+            <a href="#products" className="hover:text-cyan-400 transition">
+              Products
+            </a>
+            <a href="#pricing" className="hover:text-cyan-400 transition">
+              Membership
+            </a>
+            <a href="#contact" className="hover:text-cyan-400 transition">
+              Contact
+            </a>
+          </nav>
+
+          <button className="bg-cyan-500 hover:bg-cyan-400 transition px-5 py-2 rounded-xl font-semibold text-black">
+            Login
+          </button>
         </div>
-    </header>
+      </header>
 
-    <section class="py-16 px-4 text-center relative overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-indigo-600/10 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="relative z-10">
-            <span class="bg-indigo-500/10 text-indigo-400 text-xs font-bold px-4 py-1.5 rounded-full border border-indigo-500/20 uppercase tracking-widest">Harga Marhaen, Kualiti Kayangan</span>
-            <h1 class="text-4xl md:text-6xl font-black text-white mt-6 mb-4 leading-tight">
-                Langganan OTT Premium <br>
-                <span class="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent underline decoration-indigo-500/30">Serendah RM6 Sahaja!</span>
-            </h1>
-            <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-                Pilih pakej kegemaran anda di Necklenj Store. Sistem kami menyokong penambahan device mengikut keperluan anda. 100% Bergaransi!
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl"></div>
+
+        <div className="max-w-7xl mx-auto px-6 py-28 relative z-10 grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <span className="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm inline-block mb-6 border border-cyan-500/20">
+              Platform Produk Digital Premium
+            </span>
+
+            <h2 className="text-5xl lg:text-7xl font-black leading-tight mb-6">
+              Jual Produk Digital Dengan Sistem Auto Delivery
+            </h2>
+
+            <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl">
+              Website lengkap untuk menjual source code, template,
+              membership, IPTV panel, ebook, AI prompt dan pelbagai lagi
+              produk digital dengan sistem pembayaran automatik.
             </p>
+
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-cyan-500 hover:bg-cyan-400 transition px-7 py-4 rounded-2xl text-black font-bold text-lg shadow-lg shadow-cyan-500/30">
+                Start Selling
+              </button>
+
+              <button className="border border-white/20 hover:border-cyan-400 hover:text-cyan-400 transition px-7 py-4 rounded-2xl font-semibold">
+                View Demo
+              </button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-6 mt-14">
+              <div>
+                <h3 className="text-4xl font-black text-cyan-400">10K+</h3>
+                <p className="text-gray-400 text-sm mt-2">Produk Dijual</p>
+              </div>
+
+              <div>
+                <h3 className="text-4xl font-black text-cyan-400">5K+</h3>
+                <p className="text-gray-400 text-sm mt-2">Member Aktif</p>
+              </div>
+
+              <div>
+                <h3 className="text-4xl font-black text-cyan-400">24/7</h3>
+                <p className="text-gray-400 text-sm mt-2">Auto Delivery</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="bg-gradient-to-br from-cyan-500 to-purple-600 rounded-[40px] p-1 shadow-2xl shadow-cyan-500/20">
+              <div className="bg-zinc-900 rounded-[38px] p-8">
+                <div className="grid gap-5">
+                  <div className="bg-zinc-800 rounded-2xl p-5 border border-white/5">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <h3 className="font-bold text-lg">Auto Payment</h3>
+                        <p className="text-sm text-gray-400">
+                          ToyyibPay & Stripe Support
+                        </p>
+                      </div>
+
+                      <div className="w-14 h-14 bg-cyan-500 rounded-2xl flex items-center justify-center text-black font-black text-xl">
+                        $
+                      </div>
+                    </div>
+
+                    <div className="h-3 rounded-full bg-zinc-700 overflow-hidden">
+                      <div className="w-4/5 h-full bg-cyan-400"></div>
+                    </div>
+                  </div>
+
+                  <div className="bg-zinc-800 rounded-2xl p-5 border border-white/5">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <h3 className="font-bold text-lg">Secure Download</h3>
+                        <p className="text-sm text-gray-400">
+                          Protected Tokenized URL
+                        </p>
+                      </div>
+
+                      <div className="w-14 h-14 bg-purple-500 rounded-2xl flex items-center justify-center text-white font-black text-xl">
+                        🔒
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 mt-4">
+                      <div className="bg-zinc-700 px-3 py-2 rounded-xl text-sm">
+                        Cloudflare
+                      </div>
+                      <div className="bg-zinc-700 px-3 py-2 rounded-xl text-sm">
+                        Anti Bot
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-zinc-800 rounded-2xl p-5 border border-white/5">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-bold text-lg">Membership System</h3>
+                        <p className="text-sm text-gray-400">
+                          VIP & Subscription Support
+                        </p>
+                      </div>
+
+                      <div className="text-green-400 font-bold text-lg">
+                        ACTIVE
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="katalog" class="py-12 px-4">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-            
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition relative overflow-hidden group">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-600/5 blur-3xl group-hover:bg-indigo-600/20 transition"></div>
-                <div>
-                    <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-2">Pakej Jimat</h3>
-                    <h2 class="text-2xl font-black text-white mb-4">Pakej 3 Bulan</h2>
-                    <div class="mb-6">
-                        <span class="text-4xl font-black text-white" id="price-p3m">RM6</span>
-                        <span class="text-slate-500 text-sm">/ 3 bulan</span>
-                    </div>
-                    <ul class="space-y-3 text-sm text-slate-400 mb-8">
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Akses Full 90 Hari</li>
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Kualiti 4K UHD</li>
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Garansi Penuh 3 Bulan</li>
-                    </ul>
+      {/* Features */}
+      <section id="features" className="py-24 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-5xl font-black mb-6">
+              Powerful Features
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Semua fitur penting untuk membina platform jualan produk digital
+              moden dan premium.
+            </p>
+          </div>
 
-                    <div class="bg-slate-950/50 rounded-2xl p-4 border border-slate-800 mb-6">
-                        <p class="text-xs font-bold text-slate-500 uppercase mb-3">Jumlah Device (Max 5)</p>
-                        <div class="flex items-center justify-between">
-                            <button onclick="changeDevice('p3m', -1)" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition"><i class="fas fa-minus"></i></button>
-                            <span class="text-xl font-bold text-white" id="dev-p3m">1</span>
-                            <button onclick="changeDevice('p3m', 1)" class="w-10 h-10 bg-indigo-600 hover:bg-indigo-500 rounded-lg flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
-                        </div>
-                        <p class="text-[10px] text-slate-500 mt-2 text-center">+RM5 per-device tambahan</p>
-                    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-zinc-900 border border-white/5 hover:border-cyan-500/40 transition rounded-3xl p-7"
+              >
+                <div className="w-14 h-14 bg-cyan-500/20 rounded-2xl flex items-center justify-center text-cyan-400 text-2xl mb-6">
+                  ⚡
                 </div>
-                <a id="btn-p3m" href="#" class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-indigo-600/20">Beli Sekarang</a>
-            </div>
 
-            <div class="bg-slate-900 border-2 border-indigo-600 rounded-3xl p-8 flex flex-col justify-between hover:border-indigo-500 transition relative transform lg:-translate-y-4 shadow-2xl shadow-indigo-600/10">
-                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase">Paling Popular</span>
-                <div>
-                    <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-2">Pakej Stabil</h3>
-                    <h2 class="text-2xl font-black text-white mb-4">Guna Selagi Boleh</h2>
-                    <div class="mb-6">
-                        <span class="text-4xl font-black text-white" id="price-gsb">RM8</span>
-                        <span class="text-slate-500 text-sm">/ sekali bayar</span>
-                    </div>
-                    <ul class="space-y-3 text-sm text-slate-400 mb-8">
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Akses Tanpa Had Masa</li>
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Bergantung pada Polisi OTT</li>
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Garansi 1 Bulan (Replace)</li>
-                    </ul>
-
-                    <div class="bg-slate-950/50 rounded-2xl p-4 border border-slate-800 mb-6">
-                        <p class="text-xs font-bold text-slate-500 uppercase mb-3">Jumlah Device (Max 5)</p>
-                        <div class="flex items-center justify-between">
-                            <button onclick="changeDevice('gsb', -1)" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition"><i class="fas fa-minus"></i></button>
-                            <span class="text-xl font-bold text-white" id="dev-gsb">1</span>
-                            <button onclick="changeDevice('gsb', 1)" class="w-10 h-10 bg-indigo-600 hover:bg-indigo-500 rounded-lg flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
-                        </div>
-                        <p class="text-[10px] text-slate-500 mt-2 text-center">+RM5 per-device tambahan</p>
-                    </div>
-                </div>
-                <a id="btn-gsb" href="#" class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-indigo-600/20">Beli Sekarang</a>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition relative">
-                <div>
-                    <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-2">Pakej VIP</h3>
-                    <h2 class="text-2xl font-black text-white mb-4">Pakej Lifetime</h2>
-                    <div class="mb-6">
-                        <span class="text-4xl font-black text-white" id="price-life">RM30</span>
-                        <span class="text-slate-500 text-sm">/ seumur hidup</span>
-                    </div>
-                    <ul class="space-y-3 text-sm text-slate-400 mb-8">
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Bayar Sekali, Nonton Selamanya</li>
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Akaun Private/Sharing VIP</li>
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Support Garansi Lifetime</li>
-                    </ul>
-
-                    <div class="bg-slate-950/50 rounded-2xl p-4 border border-slate-800 mb-6">
-                        <p class="text-xs font-bold text-slate-500 uppercase mb-3">Jumlah Device (Max 5)</p>
-                        <div class="flex items-center justify-between">
-                            <button onclick="changeDevice('life', -1)" class="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition"><i class="fas fa-minus"></i></button>
-                            <span class="text-xl font-bold text-white" id="dev-life">1</span>
-                            <button onclick="changeDevice('life', 1)" class="w-10 h-10 bg-indigo-600 hover:bg-indigo-500 rounded-lg flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
-                        </div>
-                        <p class="text-[10px] text-slate-500 mt-2 text-center">+RM5 per-device tambahan</p>
-                    </div>
-                </div>
-                <a id="btn-life" href="#" class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-indigo-600/20">Beli Sekarang</a>
-            </div>
-
+                <h3 className="font-bold text-lg leading-relaxed">
+                  {feature}
+                </h3>
+              </div>
+            ))}
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer class="py-12 px-4 border-t border-slate-900 text-center text-slate-500">
-        <p class="text-sm">© 2026 Necklenj Store. Harga penambahan peranti tertakluk pada terma & syarat.</p>
-    </footer>
+      {/* Products */}
+      <section id="products" className="py-24 bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+            <div>
+              <h2 className="text-5xl font-black mb-6">
+                Popular Digital Products
+              </h2>
+              <p className="text-gray-400 text-lg max-w-2xl">
+                Platform support pelbagai jenis produk digital untuk dijual
+                secara automatik.
+              </p>
+            </div>
 
-    <script>
-        // Konfigurasi Harga Asas
-        const config = {
-            p3m: { base: 6, devices: 1, name: "Pakej 3 Bulan" },
-            gsb: { base: 8, devices: 1, name: "Pakej Guna Selagi Boleh" },
-            life: { base: 30, devices: 1, name: "Pakej Lifetime" }
-        };
+            <button className="border border-cyan-500 text-cyan-400 px-6 py-3 rounded-2xl hover:bg-cyan-500 hover:text-black transition font-semibold">
+              Explore Products
+            </button>
+          </div>
 
-        // Nombor WhatsApp Anda
-        const noWA = "60123456789"; // GANTI DENGAN NO ANDA
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-7">
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className="bg-black rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition group"
+              >
+                <div className="overflow-hidden h-60">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+                </div>
 
-        function changeDevice(pkg, val) {
-            const current = config[pkg];
-            const newCount = current.devices + val;
+                <div className="p-6">
+                  <h3 className="font-bold text-xl mb-3">{product.title}</h3>
 
-            // Had min 1, max 5
-            if (newCount >= 1 && newCount <= 5) {
-                current.devices = newCount;
-                updateDisplay(pkg);
-            }
-        }
+                  <button className="mt-4 w-full bg-cyan-500 hover:bg-cyan-400 transition text-black py-3 rounded-2xl font-bold">
+                    View Product
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        function updateDisplay(pkg) {
-            const data = config[pkg];
-            const devEl = document.getElementById(`dev-${pkg}`);
-            const priceEl = document.getElementById(`price-${pkg}`);
-            const btnEl = document.getElementById(`btn-${pkg}`);
+      {/* Pricing */}
+      <section id="pricing" className="py-24 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-5xl font-black mb-6">
+              Membership Packages
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Pilih pakej membership yang sesuai untuk akses premium dan fitur
+              tambahan.
+            </p>
+          </div>
 
-            // Kira Harga: Harga Asas + (Device Tambahan * RM5)
-            const totalPrice = data.base + ((data.devices - 1) * 5);
+          <div className="grid lg:grid-cols-3 gap-8">
+            {packages.map((item, index) => (
+              <div
+                key={index}
+                className={`rounded-[32px] p-8 border ${
+                  index === 1
+                    ? 'bg-cyan-500 text-black border-cyan-400 scale-105'
+                    : 'bg-zinc-900 border-white/5'
+                }`}
+              >
+                <div className="mb-8">
+                  <h3 className="text-2xl font-black mb-2">{item.name}</h3>
+                  <p
+                    className={`text-sm ${
+                      index === 1 ? 'text-black/70' : 'text-gray-400'
+                    }`}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
 
-            // Kemaskini UI
-            devEl.innerText = data.devices;
-            priceEl.innerText = `RM${totalPrice}`;
+                <div className="text-6xl font-black mb-8">{item.price}</div>
 
-            // Kemaskini Link WhatsApp
-            const mesej = `Halo Necklenj Store! Saya nak order:\n\nProduk: ${data.name}\nJumlah Device: ${data.devices}\nTotal Harga: RM${totalPrice}\n\nMohon maklumat pembayaran ya!`;
-            const encodedMesej = encodeURIComponent(mesej);
-            btnEl.href = `https://wa.me/${noWA}?text=${encodedMesej}`;
-        }
+                <div className="space-y-4 mb-10">
+                  {item.features.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div
+                        className={`w-6 h-6 rounded-full flex items-center justify-center text-sm ${
+                          index === 1
+                            ? 'bg-black text-cyan-400'
+                            : 'bg-cyan-500 text-black'
+                        }`}
+                      >
+                        ✓
+                      </div>
 
-        // Jalankan updateDisplay untuk semua pakej semasa load pertama kali
-        window.onload = () => {
-            Object.keys(config).forEach(pkg => updateDisplay(pkg));
-        };
-    </script>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
 
-</body>
-</html>
+                <button
+                  className={`w-full py-4 rounded-2xl font-bold transition ${
+                    index === 1
+                      ? 'bg-black text-white hover:bg-zinc-900'
+                      : 'bg-cyan-500 text-black hover:bg-cyan-400'
+                  }`}
+                >
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-gradient-to-r from-cyan-500 to-purple-600">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-5xl font-black text-black mb-6">
+            Mulakan Platform Produk Digital Anda Hari Ini
+          </h2>
+
+          <p className="text-black/80 text-lg max-w-3xl mx-auto leading-relaxed mb-10">
+            Bina sistem jualan produk digital profesional lengkap dengan auto
+            payment, auto delivery dan membership system.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-5">
+            <button className="bg-black hover:bg-zinc-900 transition px-8 py-4 rounded-2xl font-bold text-white text-lg">
+              Launch Website
+            </button>
+
+            <button className="bg-white hover:bg-gray-200 transition px-8 py-4 rounded-2xl font-bold text-black text-lg">
+              Contact Support
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer
+        id="contact"
+        className="border-t border-white/5 bg-black py-16"
+      >
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 gap-12">
+          <div>
+            <h2 className="text-3xl font-black mb-4">
+              Digital<span className="text-cyan-400">Store</span>
+            </h2>
+
+            <p className="text-gray-400 leading-relaxed">
+              Platform jualan produk digital moden dengan sistem automasi penuh.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-5">Navigation</h3>
+
+            <div className="space-y-3 text-gray-400">
+              <p>Home</p>
+              <p>Products</p>
+              <p>Membership</p>
+              <p>Contact</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-5">Features</h3>
+
+            <div className="space-y-3 text-gray-400">
+              <p>Auto Delivery</p>
+              <p>Payment Gateway</p>
+              <p>Admin Dashboard</p>
+              <p>Cloudflare Security</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-5">Contact</h3>
+
+            <div className="space-y-3 text-gray-400">
+              <p>support@digitalstore.com</p>
+              <p>Telegram Support</p>
+              <p>WhatsApp Support</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center text-gray-500 text-sm">
+          © 2026 DigitalStore. All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+  );
+}
